@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Turkana County Education Bursary Portal</title>
+  <style>
+    body { font-family: system-ui, sans-serif; margin:0; background: #fff8f0; color: #292524; }
+    header { background: #d97706; color: white; padding: 2rem; text-align: center; }
+    .box { max-width: 600px; margin: 2rem auto; background: white; padding: 2rem; border-radius: 8px; border: 1px solid #fed7aa; }
+    label { display: block; margin-top: 1rem; font-weight: bold; }
+    input, select { width: 100%; padding: 0.6rem; margin-top: 0.3rem; border: 1px solid #ccc; border-radius: 4px; box-sizing: border-box; }
+    button { background: #d97706; color: white; border: none; padding: 0.75rem 1.5rem; width: 100%; font-weight: bold; margin-top: 1.5rem; border-radius: 4px; cursor: pointer; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Turkana County Bursary Fund</h1>
+    <p>Empowering Youth Through Secondary & Tertiary Support</p>
+  </header>
+  <div class="box">
+    <h2>Student Application Form</h2>
+    <form onsubmit="alert('Application submitted successfully!'); return false;">
+      <label>Full Name</label>
+      <input type="text" placeholder="e.g. Jackson Lokutan" required>
+      <label>Sub-County / Ward</label>
+      <select><option>Turkana Central (Lodwar Township)</option><option>Turkana West</option><option>Turkana South</option><option>Turkana North</option><option>Turkana East</option><option>Loima</option></select>
+      <label>Institution Name</label>
+      <input type="text" placeholder="e.g. Lodwar Technical Vocational College" required>
+      <button type="submit">Submit Application</button>
+    </form>
+  </div>
+</body>
+</html>
