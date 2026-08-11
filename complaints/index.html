@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Turkana County Public Complaint & Feedback System</title>
+  <style>
+    :root {
+      --primary: #006837;
+      --gold: #f7941e;
+      --dark: #0f172a;
+      --light: #f8fafc;
+      --danger: #dc2626;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; font-family: system-ui, -apple-system, sans-serif; }
+    body { background: var(--light); color: var(--dark); line-height: 1.6; }
+
+    header { background: var(--primary); color: white; padding: 2rem 1.5rem; text-align: center; border-bottom: 4px solid var(--gold); }
+    header h1 { font-size: 2rem; margin-bottom: 0.5rem; }
+    header p { opacity: 0.9; font-size: 1rem; }
+
+    .container { max-width: 800px; margin: 2.5rem auto; padding: 0 1.5rem; }
+    
+    .card { background: white; border: 1px solid #cbd5e1; border-radius: 8px; padding: 2rem; box-shadow: 0 4px 6px rgba(0,0,0,0.05); }
+    .card h2 { color: var(--primary); margin-bottom: 1rem; font-size: 1.5rem; border-bottom: 2px solid var(--gold); padding-bottom: 0.3rem; display: inline-block; }
+
+    .form-group { margin-bottom: 1.25rem; }
+    label { display: block; font-weight: 600; margin-bottom: 0.4rem; color: #334155; }
+    input, select, textarea { width: 100%; padding: 0.75rem; border: 1px solid #cbd5e1; border-radius: 6px; font-size: 0.95rem; background: #fff; }
+    input:focus, select:focus, textarea:focus { outline: none; border-color: var(--primary); ring: 2px solid var(--primary); }
+
+    .btn-submit { background: var(--primary); color: white; font-weight: 700; font-size: 1rem; padding: 0.85rem 1.5rem; border: none; border-radius: 6px; width: 100%; cursor: pointer; transition: background 0.2s; }
+    .btn-submit:hover { background: #004d28; }
+
+    .info-box { background: #eff6ff; border-left: 4px solid #3b82f6; padding: 1rem; margin-bottom: 1.5rem; border-radius: 0 6px 6px 0; font-size: 0.9rem; color: #1e40af; }
+
+    footer { background: var(--dark); color: #94a3b8; text-align: center; padding: 2rem; margin-top: 4rem; font-size: 0.85rem; }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Turkana County Public Complaint & Feedback Portal</h1>
+    <p>Promoting Public Participation, Service Delivery Integrity & Transparency</p>
+  </header>
+
+  <main class="container">
+    <div class="card">
+      <h2>Submit Citizen Feedback or Grievance</h2>
+      <p style="margin-bottom: 1.5rem; color: #64748b; font-size: 0.95rem;">
+        Report issues regarding public service delivery, water supply, infrastructure, or submit commendations to the County Executive Committee.
+      </p>
+
+      <div class="info-box">
+        ℹ️ <strong>Confidentiality Guarantee:</strong> All submissions are tracked securely. You can choose to submit anonymously if reporting sensitive integrity issues.
+      </div>
+
+      <form onsubmit="alert('Thank you! Your complaint/feedback ticket #TCG-2026-8892 has been submitted to Turkana County Administration.'); return false;">
+        
+        <div class="form-group">
+          <label for="fullname">Full Name (Optional for Anonymous Submissions)</label>
+          <input type="text" id="fullname" placeholder="e.g. Jackson Lokutan">
+        </div>
+
+        <div class="form-group">
+          <label for="phone">Phone Number / WhatsApp</label>
+          <input type="tel" id="phone" placeholder="e.g. +254 700 000 000" required>
+        </div>
+
+        <div class="form-group">
+          <label for="subcounty">Select Sub-County</label>
+          <select id="subcounty" required>
+            <option value="">-- Select Sub-County --</option>
+            <option value="central">Turkana Central (Lodwar)</option>
+            <option value="west">Turkana West (Kakuma)</option>
+            <option value="south">Turkana South (Lokichar)</option>
+            <option value="north">Turkana North (Lokitaung)</option>
+            <option value="east">Turkana East (Lokori)</option>
+            <option value="loima">Loima (Lorugum)</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="category">Category of Feedback</label>
+          <select id="category" required>
+            <option value="">-- Select Category --</option>
+            <option value="water">Water Supply & Borehole Repairs</option>
+            <option value="health">Health Facility & Clinic Services</option>
+            <option value="roads">Road Maintenance & Infrastructure</option>
+            <option value="trade">Business Permitting & Licensing</option>
+            <option value="bursary">Bursary & Education Fund Inquiries</option>
+            <option value="integrity">Public Integrity & Governance</option>
+            <option value="general">General Inquiry / Suggestion</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="message">Detailed Description</label>
+          <textarea id="message" rows="5" placeholder="Describe the location, issue, or feedback in detail..." required></textarea>
+        </div>
+
+        <button type="submit" class="btn-submit">Submit Ticket to County Ombudsman</button>
+      </form>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Turkana County Government • Citizen Redress & Ombudsman Department</p>
+  </footer>
+
+</body>
+</html>
